@@ -97,6 +97,32 @@ body {
     width: 80%;
 }
 
+/* Mobile Nav Adjustments */
+@media (max-width: 991.98px) {
+    .nav-hover-effect-light::after {
+        left: 0;
+        transform: none;
+    }
+    
+    .nav-hover-effect-light:hover::after,
+    .nav-link.active::after {
+        width: 100%;
+    }
+    
+    .glass-mobile-menu-light {
+        background: #ffffff;
+        border-radius: 12px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+        padding: 10px 0;
+        margin-top: 15px;
+    }
+    
+    .glass-mobile-menu-light .nav-link {
+        padding: 12px 20px;
+        font-size: 1.1rem;
+    }
+}
+
 /* Glowing Gold Button */
 .btn-gold-glow {
     background: linear-gradient(135deg, var(--accent-gold), #e8a928);
