@@ -1,0 +1,94 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="deskBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1E293B"/>
+      <stop offset="100%" stop-color="#0F172A"/>
+    </linearGradient>
+    <linearGradient id="docGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF"/>
+      <stop offset="100%" stop-color="#F1F5F9"/>
+    </linearGradient>
+    <filter id="cardShadow" x="-10%" y="-10%" width="130%" height="130%">
+      <feDropShadow dx="0" dy="12" stdDeviation="15" flood-color="#000000" flood-opacity="0.35"/>
+    </filter>
+  </defs>
+
+  <!-- Background Desk -->
+  <rect width="600" height="400" fill="url(#deskBg)"/>
+  
+  <!-- Subtle Office Grid / Pattern -->
+  <circle cx="500" cy="80" r="140" fill="#2563EB" opacity="0.08"/>
+  <circle cx="100" cy="320" r="160" fill="#D99A19" opacity="0.06"/>
+
+  <!-- Background Documents -->
+  <g transform="translate(140, 60) rotate(-6)" filter="url(#cardShadow)">
+    <rect width="240" height="300" rx="8" fill="#E2E8F0"/>
+    <rect x="25" y="30" width="120" height="12" rx="3" fill="#94A3B8"/>
+    <rect x="25" y="55" width="190" height="6" rx="2" fill="#CBD5E1"/>
+    <rect x="25" y="70" width="170" height="6" rx="2" fill="#CBD5E1"/>
+    <rect x="25" y="85" width="180" height="6" rx="2" fill="#CBD5E1"/>
+  </g>
+
+  <!-- Main Customs Declaration Document -->
+  <g transform="translate(200, 45) rotate(3)" filter="url(#cardShadow)">
+    <rect width="250" height="315" rx="10" fill="url(#docGrad)" stroke="#CBD5E1" stroke-width="1.5"/>
+
+    <!-- Document Header Badge -->
+    <rect x="25" y="25" width="40" height="40" rx="6" fill="#092957"/>
+    <path d="M45 35 L40 50 L50 50 Z" fill="#D99A19"/>
+    <circle cx="45" cy="45" r="4" fill="#FFFFFF"/>
+    <text x="75" y="42" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="800" font-size="13" fill="#092957">CUSTOMS DECLARATION</text>
+    <text x="75" y="56" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="600" font-size="8" fill="#64748B">INTERNATIONAL EXPORT PERMIT</text>
+
+    <line x1="25" y1="78" x2="225" y2="78" stroke="#E2E8F0" stroke-width="1.5"/>
+
+    <!-- Form Lines -->
+    <rect x="25" y="95" width="65" height="7" rx="2" fill="#092957" opacity="0.7"/>
+    <rect x="95" y="95" width="130" height="7" rx="2" fill="#E2E8F0"/>
+
+    <rect x="25" y="115" width="80" height="7" rx="2" fill="#092957" opacity="0.7"/>
+    <rect x="110" y="115" width="115" height="7" rx="2" fill="#E2E8F0"/>
+
+    <rect x="25" y="135" width="50" height="7" rx="2" fill="#092957" opacity="0.7"/>
+    <rect x="80" y="135" width="145" height="7" rx="2" fill="#E2E8F0"/>
+
+    <!-- Table of goods -->
+    <rect x="25" y="155" width="200" height="55" rx="4" fill="#F8FAFC" stroke="#E2E8F0"/>
+    <line x1="25" y1="172" x2="225" y2="172" stroke="#CBD5E1"/>
+    <text x="32" y="167" font-family="'Plus Jakarta Sans', sans-serif" font-size="6" font-weight="bold" fill="#64748B">ITEM CODE</text>
+    <text x="90" y="167" font-family="'Plus Jakarta Sans', sans-serif" font-size="6" font-weight="bold" fill="#64748B">DESCRIPTION</text>
+    <text x="180" y="167" font-family="'Plus Jakarta Sans', sans-serif" font-size="6" font-weight="bold" fill="#64748B">STATUS</text>
+
+    <text x="32" y="186" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" fill="#334155">HS-8471</text>
+    <text x="90" y="186" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" fill="#334155">Commercial Cargo</text>
+    <text x="180" y="186" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="bold" fill="#16A34A">PASSED</text>
+
+    <text x="32" y="200" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" fill="#334155">EXP-9022</text>
+    <text x="90" y="200" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" fill="#334155">Industrial Goods</text>
+    <text x="180" y="200" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="bold" fill="#16A34A">PASSED</text>
+
+    <!-- APPROVED STAMP -->
+    <g transform="translate(115, 215) rotate(-14)">
+      <rect x="0" y="0" width="105" height="42" rx="6" fill="none" stroke="#D99A19" stroke-width="3" stroke-dasharray="3 1"/>
+      <text x="52" y="20" font-family="'Plus Jakarta Sans', sans-serif" font-size="12" font-weight="900" text-anchor="middle" fill="#D99A19" letter-spacing="1.5">CLEARED</text>
+      <text x="52" y="33" font-family="'Plus Jakarta Sans', sans-serif" font-size="7" font-weight="700" text-anchor="middle" fill="#D99A19">JOY TRADING LOGISTICS</text>
+    </g>
+
+    <!-- Signatures -->
+    <path d="M35 285 C55 270 70 295 95 280 T130 282" fill="none" stroke="#092957" stroke-width="2" stroke-linecap="round"/>
+    <line x1="30" y1="292" x2="135" y2="292" stroke="#94A3B8" stroke-width="1"/>
+    <text x="30" y="302" font-family="'Plus Jakarta Sans', sans-serif" font-size="6" fill="#94A3B8">OFFICIAL CUSTOMS OFFICER</text>
+  </g>
+
+  <!-- Luxury Fountain Pen -->
+  <g transform="translate(420, 240) rotate(-45)">
+    <!-- Pen Barrel -->
+    <polygon points="10,0 20,0 18,120 12,120" fill="#092957"/>
+    <!-- Gold Trim Rings -->
+    <rect x="11" y="25" width="8" height="4" fill="#D99A19"/>
+    <rect x="11" y="90" width="8" height="4" fill="#D99A19"/>
+    <!-- Nib -->
+    <polygon points="12,120 18,120 15,145" fill="#D99A19"/>
+    <polygon points="13.5,135 16.5,135 15,145" fill="#E2E8F0"/>
+  </g>
+</svg>

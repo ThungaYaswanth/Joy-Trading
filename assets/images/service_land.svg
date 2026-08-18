@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 400" width="600" height="400">
+  <defs>
+    <linearGradient id="skyGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8984E"/>
+      <stop offset="35%" stop-color="#F3C378"/>
+      <stop offset="65%" stop-color="#E2D4B7"/>
+      <stop offset="100%" stop-color="#8F9EA9"/>
+    </linearGradient>
+    <linearGradient id="sunGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFFDF5"/>
+      <stop offset="100%" stop-color="#FFB347"/>
+    </linearGradient>
+    <linearGradient id="roadGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#464F59"/>
+      <stop offset="100%" stop-color="#1E242B"/>
+    </linearGradient>
+    <linearGradient id="truckBody" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#E2E8F0"/>
+      <stop offset="100%" stop-color="#FFFFFF"/>
+    </linearGradient>
+    <linearGradient id="cabGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#D99A19"/>
+      <stop offset="100%" stop-color="#F5B942"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Sky -->
+  <rect width="600" height="400" fill="url(#skyGrad)"/>
+
+  <!-- Sun -->
+  <circle cx="340" cy="180" r="70" fill="url(#sunGrad)" opacity="0.85"/>
+  <circle cx="340" cy="180" r="110" fill="#FFF8E7" opacity="0.3"/>
+
+  <!-- Distant Landscape / Trees / Mountains -->
+  <path d="M0 240 Q150 210 300 230 T600 235 L600 260 L0 260 Z" fill="#6B7782" opacity="0.6"/>
+  <path d="M0 248 Q200 230 400 245 T600 242 L600 270 L0 270 Z" fill="#4B5663"/>
+
+  <!-- Road -->
+  <polygon points="260,250 360,250 600,400 0,400" fill="url(#roadGrad)"/>
+  <!-- Road Lane Dash Lines -->
+  <polygon points="308,252 312,252 335,400 325,400" fill="#F4EDE0" opacity="0.9"/>
+
+  <!-- Modern White Logistics Semi-Truck -->
+  <g transform="translate(180, 155) scale(0.65)">
+    <!-- Trailer Shadow -->
+    <ellipse cx="230" cy="255" rx="190" ry="18" fill="#0D131A" opacity="0.7"/>
+
+    <!-- Trailer Box -->
+    <rect x="70" y="50" width="260" height="150" rx="6" fill="url(#truckBody)" stroke="#CBD5E1" stroke-width="2"/>
+    
+    <!-- Trailer Graphics / Joy Trading Decal -->
+    <path d="M90 125 C140 100 210 160 290 115" stroke="#D99A19" stroke-width="6" fill="none" stroke-linecap="round"/>
+    <path d="M100 138 C150 115 220 170 300 128" stroke="#092957" stroke-width="4" fill="none" stroke-linecap="round"/>
+    <text x="110" y="105" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="900" font-size="20" fill="#092957">JOY <tspan fill="#D99A19">TRADING</tspan></text>
+    <text x="110" y="118" font-family="'Plus Jakarta Sans', Arial, sans-serif" font-weight="700" font-size="8" letter-spacing="2" fill="#64748B">LAND TRANSPORT</text>
+
+    <!-- Trailer Wheels -->
+    <g fill="#1E293B">
+      <circle cx="110" cy="205" r="24"/>
+      <circle cx="110" cy="205" r="14" fill="#94A3B8"/>
+      <circle cx="110" cy="205" r="6" fill="#334155"/>
+      <circle cx="155" cy="205" r="24"/>
+      <circle cx="155" cy="205" r="14" fill="#94A3B8"/>
+      <circle cx="155" cy="205" r="6" fill="#334155"/>
+    </g>
+
+    <!-- Truck Cab -->
+    <path d="M330 90 L390 90 Q415 95 425 125 L445 170 Q450 180 450 195 L450 205 L330 205 Z" fill="#092957"/>
+    <path d="M345 100 L390 100 Q405 102 415 125 L428 150 L345 150 Z" fill="#38BDF8" opacity="0.85"/>
+    <!-- Headlight & Chrome Grille -->
+    <rect x="435" y="170" width="15" height="15" rx="3" fill="#FEF08A"/>
+    <rect x="425" y="170" width="8" height="28" fill="#CBD5E1"/>
+    
+    <!-- Cab Wheels -->
+    <circle cx="395" cy="205" r="24" fill="#1E293B"/>
+    <circle cx="395" cy="205" r="14" fill="#94A3B8"/>
+    <circle cx="395" cy="205" r="6" fill="#334155"/>
+  </g>
+
+  <!-- Speed motion lines -->
+  <line x1="0" y1="360" x2="160" y2="360" stroke="#FDBA74" stroke-width="2" stroke-dasharray="15 10" opacity="0.6"/>
+  <line x1="450" y1="340" x2="600" y2="340" stroke="#FDBA74" stroke-width="2" stroke-dasharray="25 15" opacity="0.6"/>
+</svg>

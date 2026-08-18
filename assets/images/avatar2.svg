@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100">
+  <defs>
+    <clipPath id="circleClip2">
+      <circle cx="50" cy="50" r="50"/>
+    </clipPath>
+    <linearGradient id="avatarBg2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FEF3C7"/>
+      <stop offset="100%" stop-color="#FDE68A"/>
+    </linearGradient>
+  </defs>
+  <g clip-path="url(#circleClip2)">
+    <rect width="100" height="100" fill="url(#avatarBg2)"/>
+    <!-- Long Hair Back -->
+    <path d="M22 40 C20 75 25 85 30 95 L70 95 C75 85 80 75 78 40 Z" fill="#1C1917"/>
+    <!-- Head -->
+    <path d="M33 38 Q50 20 67 38 L67 52 Q50 66 33 52 Z" fill="#E5B288"/>
+    <!-- Hair Front/Sides -->
+    <path d="M30 38 Q50 22 70 38 C68 26 58 18 50 18 C42 18 32 26 30 38 Z" fill="#1C1917"/>
+    <path d="M28 38 C28 55 33 70 36 78 C32 68 31 52 32 40 Z" fill="#1C1917"/>
+    <path d="M72 38 C72 55 67 70 64 78 C68 68 69 52 68 40 Z" fill="#1C1917"/>
+    <!-- Blazer / Outfit -->
+    <path d="M18 100 L30 65 L70 65 L82 100 Z" fill="#1E293B"/>
+    <polygon points="42,65 58,65 53,84 47,84" fill="#38BDF8"/>
+  </g>
+</svg>
