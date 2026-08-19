@@ -158,51 +158,51 @@ document.addEventListener("DOMContentLoaded", function () {
     const testimonialTrack = document.getElementById("testimonialTrack");
 
     if (prevBtn && nextBtn && testimonialTrack) {
-        const cards = testimonialTrack.querySelectorAll(".col-lg-4");
-        let activeIndex = 0;
+        // Calculate the width of one card plus gap
+        function getScrollAmount() {
+            const firstCard = testimonialTrack.querySelector('div');
+            if (!firstCard) return 300;
+            const style = window.getComputedStyle(firstCard);
+            const gap = 24; // 1.5rem (gap-4)
+            return firstCard.offsetWidth + gap;
+        }
 
-        function updateTestimonialsView() {
-            if (window.innerWidth < 768) {
-                cards.forEach(function (card, idx) {
-                    if (idx === activeIndex) {
-                        card.classList.remove("d-none");
-                    } else {
-                        card.classList.add("d-none");
-                    }
-                });
+        let autoScrollInterval;
+
+        function scrollNext() {
+            // Check if we are at the end of the scroll container
+            if (testimonialTrack.scrollLeft + testimonialTrack.clientWidth >= testimonialTrack.scrollWidth - 10) {
+                // Smooth scroll back to start
+                testimonialTrack.scrollTo({ left: 0, behavior: 'smooth' });
             } else {
-                cards.forEach(function (card) {
-                    card.classList.remove("d-none");
-                });
+                testimonialTrack.scrollBy({ left: getScrollAmount(), behavior: 'smooth' });
             }
         }
 
+        function startAutoScroll() {
+            autoScrollInterval = setInterval(scrollNext, 3000);
+        }
+
+        function stopAutoScroll() {
+            clearInterval(autoScrollInterval);
+        }
+
         nextBtn.addEventListener("click", function () {
-            if (window.innerWidth < 768) {
-                activeIndex = (activeIndex + 1) % cards.length;
-                updateTestimonialsView();
-            } else {
-                testimonialTrack.style.transform = "scale(0.98)";
-                setTimeout(function () {
-                    testimonialTrack.style.transform = "scale(1)";
-                }, 180);
-            }
+            scrollNext();
         });
 
         prevBtn.addEventListener("click", function () {
-            if (window.innerWidth < 768) {
-                activeIndex = (activeIndex - 1 + cards.length) % cards.length;
-                updateTestimonialsView();
-            } else {
-                testimonialTrack.style.transform = "scale(0.98)";
-                setTimeout(function () {
-                    testimonialTrack.style.transform = "scale(1)";
-                }, 180);
-            }
+            testimonialTrack.scrollBy({ left: -getScrollAmount(), behavior: 'smooth' });
         });
 
-        window.addEventListener("resize", updateTestimonialsView);
-        updateTestimonialsView();
+        // Pause on hover or touch
+        testimonialTrack.addEventListener("mouseenter", stopAutoScroll);
+        testimonialTrack.addEventListener("mouseleave", startAutoScroll);
+        testimonialTrack.addEventListener("touchstart", stopAutoScroll, { passive: true });
+        testimonialTrack.addEventListener("touchend", startAutoScroll, { passive: true });
+
+        // Start the automatic slider
+        startAutoScroll();
     }
 
     console.log("Joy Trading front-end scripts ready.");

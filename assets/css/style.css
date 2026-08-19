@@ -227,8 +227,9 @@ body {
 
 /* Custom Buttons */
 .btn-primary-custom {
-    background: var(--primary-navy);
-    color: #FFFFFF;
+    background: #FFFFFF;
+    color: var(--accent-gold);
+    border: 1.5px solid var(--accent-gold);
     padding: 13px 24px;
     border-radius: 4px;
     font-size: 12px;
@@ -236,13 +237,13 @@ body {
     display: inline-flex;
     align-items: center;
     border: none;
-    box-shadow: 0 4px 15px rgba(9, 41, 87, 0.25);
+    box-shadow:  0 8px 25px rgba(217, 154, 25, 0.35);
     transition: var(--transition);
 }
 
 .btn-primary-custom:hover {
-    background-color: var(--primary-navy);
-    border-color: var(--primary-navy);
+    background: linear-gradient(135deg, var(--accent-gold), #e8a928);
+    box-shadow: 0 4px 15px rgba(217, 154, 25, 0.4);
     transform: translateY(-2px);
 }
 
@@ -397,7 +398,7 @@ body {
 .section-badge {
     display: inline-flex;
     align-items: center;
-    background-color: var(--primary-navy);
+    background-color: var(--primary-dark);
     padding: 10px 28px;
     border-radius: 50rem;
     box-shadow: 0 12px 35px rgba(9, 41, 87, 0.2);
@@ -415,7 +416,7 @@ body {
     display: inline-block;
     width: 8px;
     height: 8px;
-    background-color: #ffffff;
+    background-color: var(--accent-gold);
     border-radius: 50%;
     margin-right: 12px;
 }
@@ -797,5 +798,34 @@ body {
         border-right: none;
         border-bottom: 1px solid #E9ECEF;
         padding-bottom: 1rem;
+    }
+}
+
+/* ================= TESTIMONIAL SLIDER ================= */
+.testimonial-track {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 1rem;
+    scrollbar-width: none;
+}
+.testimonial-track::-webkit-scrollbar {
+    display: none;
+}
+.testimonial-track > div {
+    flex: 0 0 calc(33.333% - 1rem);
+    scroll-snap-align: start;
+    min-width: 300px;
+}
+@media (max-width: 991.98px) {
+    .testimonial-track > div {
+        flex: 0 0 calc(50% - 1rem);
+    }
+}
+@media (max-width: 767.98px) {
+    .testimonial-track > div {
+        flex: 0 0 100%;
     }
 }
